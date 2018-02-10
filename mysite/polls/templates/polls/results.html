@@ -1,0 +1,10 @@
+{% if choices %}
+    <ul>
+    {% for choice in choices %}
+        <li id="choice{{ forloop.counter }} ">{{ choice.choice_text }} {{choice.votes}}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results are available for this question</p>
+{% endif %}
